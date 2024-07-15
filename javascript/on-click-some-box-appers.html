@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascirpt</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .rotate{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        bottom: 0;
+        border: 1px solid black;    
+    }
+
+    span{
+       display: none;
+    }
+
+    .main span:nth-child(1){
+        position: absolute;
+        left:-50px;
+        bottom: 0;
+    }
+
+    .main span:nth-child(2){
+        position: absolute;
+        left: -40px;
+        bottom: 30px;
+        
+    }
+
+    .main span:nth-child(3){
+        position: absolute;
+        left: -20px;
+        bottom: 60px;
+    }
+
+    .main span:nth-child(4){
+        position: absolute;
+        left: 0;
+        bottom:80px;
+    }
+
+
+</style>
+
+<body>
+
+    <div class="rotate">
+
+    <div class="main" id="main" onclick="btnclick()">
+
+        <span id="span1">
+            1
+        </span>
+
+        <span id="span2">
+            2
+        </span>
+
+        <span id="span3">
+            3
+        </span>
+
+        <span id="span4">
+            4
+        </span>
+
+    </div>
+
+    </div>
+
+    <script>
+        function btnclick(){
+            document.getElementById("span1").style.display= "block";
+        }
+    </script>
+</body>
+
+</html>

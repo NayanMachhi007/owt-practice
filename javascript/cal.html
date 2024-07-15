@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+   
+    <input type="text" placeholder="First Value" id="fvalue">
+    <input type="text" placeholder="Last Value" id="lvalue">
+    <button type="submit" onclick="btnclick()">Click</button>
+
+
+    <label id="labelid">Addition is </label>
+    <label id="labelid1">Multiplication is </label>
+    <label id="labelid2">Division is </label>
+    <label id="labelid3">Substraction is </label>
+
+
+
+
+
+    <script>
+        function btnclick(){
+          document.getElementById("labelid").innerText  += parseInt(document.getElementById("fvalue").value)  + parseInt(document.getElementById("lvalue").value);
+          document.getElementById("labelid1").innerText  += parseInt(document.getElementById("fvalue").value)  * parseInt(document.getElementById("lvalue").value);
+          document.getElementById("labelid2").innerText  += parseInt(document.getElementById("fvalue").value)  / parseInt(document.getElementById("lvalue").value);
+          document.getElementById("labelid3").innerText  += parseInt(document.getElementById("fvalue").value)  - parseInt(document.getElementById("lvalue").value);
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Javascript Basic</title>
+</head>
+
+<body>
+
+
+    <h1 id="hid">Welcome to Javascript Using ID </h1>
+    <h1 class="hclass">Welcome to Javascript Using Class </h1>
+    <h1 class="hclass">Welcome to Javascript Using Class </h1>
+    <h1 class="hclass">Welcome to Javascript Using Class </h1>
+    <h1>Welcome to Javascript Using Tagname </h1>
+
+
+
+    <script>
+
+        let a = document.getElementById("hid");
+        let b = document.getElementsByClassName("hclass");
+        let c = document.getElementsByTagName("h1");
+
+        let d = [a,b,c];
+
+        console.log(d.length);
+
+       
+    </script>
+
+</body>
+
+</html>

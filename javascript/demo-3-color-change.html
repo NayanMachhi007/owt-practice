@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 3 Color Change</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main{
+            height: 100vh;
+            background: beige;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main .input-section{
+            height: 20vh;
+        }
+
+        .main .input-section input{
+           
+            border: 1px solid black;
+        }
+
+        .main .input-btn-section{
+            margin: 20px;
+        }
+
+          .main .input-btn-section button{
+            padding: 10px 20px;
+            background: powderblue;
+            font-weight: 800;
+          }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="input-section">
+            <input type="color" id="input-color">
+        </div>
+
+        <div class="input-btn-section">
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+            <button class="button" onclick="clickbtn(this)">Click</button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+    function clickbtn(colorpick){
+        colorpick.style.color = document.getElementById("input-color").value;
+    }
+
+
+
+    </script>
+</body>
+</html>

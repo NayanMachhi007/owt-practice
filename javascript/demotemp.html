@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Odd Even</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: beige;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            border: 1px solid black;
+        }
+
+        form label {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        form input {
+            margin: 0 10px;
+        }
+
+        form button {
+            padding: 0 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        table {
+            border: 1px solid black;
+            background: beige;
+            /* display: flex; */
+            justify-content: center;
+            padding: 20px 0;
+            height: 50vh;
+        }
+
+        table thead th {
+            padding: 0 20px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <label>Check The Number is Odd or Even:</label>
+        <input type="text" class="inputclass" id="inputid">
+        <button type="button" onclick="checkclick()">Check</button>
+    </form>
+
+    <table>
+        <thead>
+            <th>
+                Number:
+            </th>
+            <th>
+                Odd Number:
+            </th>
+            <th>
+                Even Number:
+            </th>
+        </thead>
+
+        <tbody id="tbody">
+
+
+        </tbody>
+    </table>
+
+
+
+    <script>
+        function checkclick() {
+            let a = document.getElementById("inputid").value;
+
+            for (let i = 1; i <= a; i++) {
+                document.getElementById("tbody").innerHTML += `<tr><td> ${i} </td></tr>`;
+
+                if (i % 2 == 0) {
+                    document.getElementById("tbody").innerHTML += `<tr><td> ${i} </td></tr>`;
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 1</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .main {
+        width: 400px;
+        height: 100px;
+    }
+
+    .main .sub-main,
+    .third-main {
+        display: flex;
+        padding: 10px;
+
+    }
+
+    .main .sub-main input {
+        padding: 5px 20px;
+        margin-right: 10px;
+    }
+
+    .information {
+        padding: 50px;
+        border: 2px solid grey;
+        display: flex;
+        margin: 20px;
+    }
+
+    .information p {
+
+        padding: 0 10px;
+
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="sub-main">
+            <input type="text" id="input-f-name" placeholder="First Name">
+
+            <input type="text" id="input-m-name" placeholder="Middle Name">
+
+            <input type="text" id="input-l-name" placeholder="last Name">
+        </div>
+
+        <div class="third-main">
+
+            <button type="button" onclick="information()">Click me</button>
+
+        </div>
+    </div>
+
+    <div class="information">
+
+        <div class="first-information">
+            <p>First Name : </p>
+            <p id="n-f-name"></p>
+        </div>
+
+        <div class="second-information">
+            <p>last Name :</p>
+            <p id="n-m-name"></p>
+        </div>
+
+    </div>
+
+
+
+    <div class="information">
+
+        <div class="first-information">
+            <p>First Name : </p>
+            <p id="m-f-name"></p>
+        </div>
+
+        <div class="second-information">
+            <p>Middle Name :</p>
+            <p id="m-m-name"></p>
+        </div>
+
+    </div>
+
+
+    <div class="information">
+
+        <div class="first-information">
+            <p>First Name : </p>
+            <p id="f-name"></p>
+        </div>
+
+        <div class="second-information">
+            <p>Middle Name :</p>
+            <p id="m-name"></p>
+        </div>
+
+        <div class="second-information">
+            <p>Last Name :</p>
+            <p id="l-name"></p>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function information() {
+            let firstname = document.getElementById("input-f-name").value;
+            let middlename = document.getElementById("input-m-name").value;
+            let lastname = document.getElementById("input-l-name").value;
+
+            document.getElementById("f-name").innerHTML = (firstname);
+            document.getElementById("m-name").innerHTML = (middlename);
+            document.getElementById("l-name").innerHTML = (lastname);
+
+            document.getElementById("n-f-name").innerHTML = (firstname);
+            document.getElementById("n-m-name").innerHTML = (lastname);
+
+
+
+            document.getElementById("m-f-name").innerHTML = (firstname);
+            document.getElementById("m-m-name").innerHTML = (middlename);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
