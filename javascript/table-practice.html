@@ -221,7 +221,13 @@
         function btnshowedit() {
             console.log(document.querySelector(".editname").firstChild);
             let studentname = document.getElementById("studentname").value;
-            document.getElementById("datashow").innerHTML += "<tr><td id='editname'> " + studentname + "</td></tr>";
+            let studentemail = document.getElementById("emailaddress").value;
+            let studentcontact = document.getElementById("studentcontact").value;
+            let studentaddress = document.getElementById("studentaddress").value;
+            let studentpassword = document.getElementById("studentpassword").value;
+
+
+            document.getElementById("datashow").innerHTML += "<tr><td id='editname'> " + studentname + " </td><td>" + studentemail + "</td><td>"+studentcontact +"</td><td>"+ studentaddress+" </td><td> " + studentpassword + "</td></tr>";
 
         }
     </script>
