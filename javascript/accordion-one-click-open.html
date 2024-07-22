@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordion </title>
+
+    <style>
+        .show {
+            display: block !important;
+        }
+
+        .panel {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="accordion"><b>Heading 1</b></div>
+    <div class="panel">
+        <p class="text-light">Text 1</p>
+    </div>
+    <div class="accordion"><b>Heading 2</b></div>
+    <div class="panel">
+        <p class="text-light">Text 2</p>
+    </div>
+
+
+
+
+
+    <script>
+
+        let acc = document.getElementsByClassName("accordion");
+        let i;
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+                console.log(this.nextElementSibling.classList.toggle("show"));
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
