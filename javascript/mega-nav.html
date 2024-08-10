@@ -19,41 +19,65 @@
             background-color: grey;
             padding: 10px 10px;
         }
-        .nav .navlist{
+
+        .nav .navlist {
             padding: 0 10px;
             cursor: pointer;
         }
 
-        .nav .navlist:hover{
+        .nav .navlist:hover {
             background: blue;
             color: white;
         }
 
-        .nav .navlist .navdetails{
+        .nav .navlist .navdetails {
             position: absolute;
             left: 0;
             width: 100%;
-            background: darkcyan;    
-            display: none;    
+            background: darkcyan;
+            display: none;
+
+        }
+
+        .nav .navlist .navdetails .navdetailssub {
+            padding: 10px 0;
            
         }
-        .nav .navlist .navdetails .navdetailssub{
-            padding: 10px 0;
+
+        .nav .navlist:hover .navdetails {
+            display: block;            
         }
 
-        .nav .navlist:hover .navdetails{
-            display: block;
+        .nav .navlist .navdetails .navdetailssub .navdetialssubul{
+            padding: 0 20px;
         }
-
-        .nav .navlist .navdetails .navdetailssub .navdetialssubul .subdetailsmain{
+        .nav .navlist .navdetails .navdetailssub .navdetialssubul .subdetailsmain {
             display: none;
+            border: 0;
+            border-left: 2px solid black;
         }
 
-        .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp{
+        .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp {
             position: relative;
         }
 
-        .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp:hover .subdetailsmain{
+
+        /* .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp::after {
+            position: absolute;
+            content: "";
+            border: 0;
+            border-bottom: 1px solid black;
+            background: black;
+            width: 0%;
+            bottom: 0;
+        }
+
+        .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp:hover::after {
+            width: 100%;
+        } */
+
+
+        .nav .navlist .navdetails .navdetailssub .navdetialssubul .navlisttemp:hover .subdetailsmain {
             display: block;
             position: absolute;
             left: 100px;
@@ -61,8 +85,7 @@
             background-color: aqua;
         }
 
-     
-
+  
     </style>
 
 </head>
@@ -81,7 +104,7 @@
                 <div class="navdetailssub">
                     <ul class="navdetialssubul">
                         <li class="navlisttemp">Home</li>
-                        <li class="navlisttemp">About 
+                        <li class="navlisttemp">About
                             <ul class="subdetailsmain">
                                 <li class="subdetailsmainlist">Home</li>
                                 <li class="subdetailsmainlist">About us</li>
