@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Practice</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        p{
+            display: inline-block;
+        }
+
+        .section-main {
+            height: 100vh;
+        }
+
+        .section-main .section-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section-main .section-wrapper .details-section {
+            width: 50%;
+            height: 50vh;
+            border: 1px solid black;
+            padding: 50px;
+        }
+
+        .section-main .section-wrapper .details-section .details-section-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 300px;
+        }
+
+        .section-main .section-wrapper .output-section {
+            width: 50%;
+            height: 50vh;
+            border: 1px solid black;
+            padding: 50px;
+
+        }
+
+        .section-main .section-wrapper .output-section .output-sub {
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .section-main .section-wrapper .genereate-section {
+            width: 100%;
+            height: 50vh;
+            border: 1px solid rgb(183, 11, 11);
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section class="section-main">
+        <div class="section-wrapper">
+
+            <div class="details-section">
+
+                <div class="details-section-wrapper">
+
+                    <div class="font-size">
+
+                        <label>Enter Value for font size: </label> <input type="text" id="input-size"
+                            onchange="btncolor()">
+
+                    </div>
+
+                    <div class="border-radius">
+
+                        <label>Enter the Border Radius if you want: </label> <input type="text" id="input-border-radius"
+                            onchange="borderradius()">
+
+                    </div>
+
+
+                    <div class="background">
+                    
+                        <label>Enter the Color Name which you can display </label> <input type="text" id="backgroundoutput"
+                            onchange="background()">
+                    
+                    </div>
+
+
+                    <div class="padding">
+                    
+                        <label>Enter the padding size if you needed  </label> <input type="text" id="paddingoutput"
+                            onchange="padding()">
+                    
+                    </div>
+
+                    <div class="margin">
+                    
+                        <label>Enter the margin size if you needed </label> <input type="text" id="marginoutput" onchange="margin()">
+                    
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="output-section">
+
+                <div class="output-sub" id="border-radius">
+                    <p id="output-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, minima.</p>
+                </div>
+
+            </div>
+
+            <div class="genereate-section" id="cssgenerator">
+
+                <p>font-size : <p id="txtfont"></p></p><br>
+
+                <p>border-radius : <p id="borderradius"></p></p><br>
+
+                <p>background : <p id="backgroundcss"></p></p><br>
+
+                <p>padding : <p id="paddingcss"></p></p><br>
+
+                <p>margin : <p id="margincss"></p></p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <script>
+
+
+        function btncolor() {
+            // document.getElementById("output-txt").style.fontSize = document.getElementById("input-size").value + "px";
+            console.log(document.getElementById("output-txt").style.fontSize = document.getElementById("input-size").value + "px");
+            document.getElementById("txtfont").innerText  = document.getElementById("input-size").value + "px;";
+
+
+
+        }
+
+        function borderradius() {
+            console.log(document.getElementById("border-radius").style.borderRadius = document.getElementById("input-border-radius").value + "px");
+            document.getElementById("borderradius").innerText = document.getElementById("input-border-radius").value + "px;";
+           
+        }
+
+
+        function background() {
+           console.log(document.getElementById("border-radius").style.background = document.getElementById("backgroundoutput").value);   
+           document.getElementById("backgroundcss").innerHTML = document.getElementById("backgroundoutput").value + ";";  
+
+        }
+
+
+        function padding() {
+            console.log(document.getElementById("border-radius").style.padding = document.getElementById("paddingoutput").value + "px");
+            document.getElementById("paddingcss").innerHTML = document.getElementById("paddingoutput").value + "px;";
+
+        }
+
+                
+        function margin() {
+            console.log(document.getElementById("border-radius").style.margin = document.getElementById("marginoutput").value + "px");
+            document.getElementById("margincss").innerHTML = document.getElementById("marginoutput").value + "px;";
+
+        }
+
+
+           function margin() {
+                console.log(document.getElementById("border-radius").style.margin = document.getElementById("marginoutput").value + "px");
+                document.getElementById("margincss").innerHTML = document.getElementById("marginoutput").value + "px;";
+
+            }
+
+    </script>
+
+</body>
+
+</html>

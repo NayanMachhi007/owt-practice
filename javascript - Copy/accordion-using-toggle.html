@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Toggle Accordion</title>
+
+    <style>
+
+        body{
+            cursor:pointer;
+        }
+
+        .accordion{
+            background: gainsboro;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+
+
+    <div class="main">
+        <div class="accordion" onclick="btnclick(this)">
+            <h1>Accordion 1</h1>
+            <p class="d-none">lorem</p>
+        </div>
+        <div class="accordion" onclick="btnclick(this)">
+            <h1>Accordion 2</h1>
+            <p class="d-none">lorem</p>
+        </div>
+        <div class="accordion" onclick="btnclick(this)">
+            <h1>Accordion 3</h1>
+            <p class="d-none">lorem</p>
+        </div>
+        <div class="accordion" onclick="btnclick(this)">
+            <h1>Accordion 4</h1>
+            <p class="d-none">lorem</p>
+        </div>
+        <div class="accordion" onclick="btnclick(this)">
+            <h1>Accordion 5</h1>
+            <p class="d-none">lorem</p>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function btnclick(data) {
+            console.log(data.children[1].classList.toggle("d-none"));
+        }
+
+    </script>
+</body>
+
+</html>

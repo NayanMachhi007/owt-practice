@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onchange</title>
+
+</head>
+ 
+<body>
+
+    <input type="range" type="5" id="input" onchange="btn()">
+
+    <button type="button" >Click me</button>
+
+    <p id="color-p" >  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consequatur porro velit expedita
+        doloremque libero quae ab sit provident aliquam!</p>
+
+    <script>
+
+        function btn() {
+            document.getElementById("color-p").style.fontSize = document.getElementById("input").value + "px";
+        }
+
+    </script>
+</body>
+
+</html>

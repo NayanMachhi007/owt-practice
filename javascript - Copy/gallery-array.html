@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Next and Previews</title>
+    <style>
+        .main-new {
+            font-size: 42px;
+            background-color: gainsboro;
+        }
+
+        .sub-main {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div class="main-new">
+            <p class="paramain">1</p>
+        </div>
+
+        <div class="sub-main">
+            <p class="para">1</p>
+            <p class="para">2</p>
+            <p class="para">3</p>
+            <p class="para">4</p>
+        </div>
+
+        <div class="btn">
+            <button type="submit" onclick="nextbtn(this)">Next</button>
+            <button type="submit" onclick="prebtn()">pre</button>
+        </div>
+    </div>
+
+
+    <script>
+        function nextbtn(){
+            let a = document.getElementsByClassName("para");        
+            console.log(a[0]);    
+
+        }
+    </script>
+</body>
+
+</html>

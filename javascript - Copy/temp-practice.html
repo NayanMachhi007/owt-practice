@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice temp</title>
+
+    <style>
+        .main {
+            display: none;
+        }
+
+        table{
+            border: 1px solid black;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button type="text" onclick="btnclick()">POP</button>
+
+    <div class="main" id="main">
+        <input type="text" id="studentname">
+        <input type="text" id="address">
+        
+    </div>
+
+
+    <table id="pops">
+        <thead>
+            <tr>
+                <td>Student Name</td>
+                <td>Address</td>
+            </tr>
+        </thead>
+        <tbody id="bodydata">
+
+
+        </tbody>
+
+        <button onclick="submitclick()">Submit</button>
+    </table>
+
+
+
+
+    <script>
+        function btnclick() {
+            document.getElementById("main").style.display = "block";
+
+        }
+
+
+        function submitclick() {
+            let studentname = document.getElementById("studentname").value;
+            let address = document.getElementById("address").value;
+            console.log(document.getElementById("bodydata").innerHTML += "<tr><td> " + studentname + "</td> <td> " + address + "</td><tr>");
+        }
+
+
+    </script>
+
+</body>
+
+</html>

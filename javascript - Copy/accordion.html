@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .accordion-section {
+            width: 100%;
+            height: 100px;
+
+        }
+
+        .accordion-section .accordion-lbl {
+            width: 50%;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .accordion-section .accordion-content {
+            width: 50%;
+            padding: 10px;
+            display: none;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        #block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="accordion-section">
+        <div class="accordion-lbl" onclick="showaccordion(this)" id="showaccordion">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, nam.</p>
+        </div>
+
+        <div class="accordion-content" id="accordion">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore delectus natus nulla vero laboriosam
+                expedita, illum, quas repudiandae culpa repellat aut quisquam aliquam accusantium ipsum velit nobis quia
+                fugiat ad similique atque cupiditate sunt exercitationem minima! Amet est asperiores nesciunt aspernatur
+                corrupti, impedit, suscipit enim perspiciatis quisquam, soluta ipsam accusantium!</p>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function showaccordion() {
+            document.getElementById("accordion").style.display = "block";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

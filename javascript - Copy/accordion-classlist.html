@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <style>
+        .d-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="accordion" onclick="btnclick(this)">
+        <div class="accordion-title">
+            <h2>
+                Accordion 1
+            </h2>
+        </div>
+
+        <div class="accprdopm-copy d-none">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, consequuntur.</p>
+        </div>
+    </div>
+
+
+    <script>
+        function btnclick(data){
+            data.children[1].classList.remove("d-none");
+        }
+    </script>
+</body>
+</html>

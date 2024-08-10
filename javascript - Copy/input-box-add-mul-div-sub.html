@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Multiplication Substraction Addition</title>
+</head>
+<body>
+    
+
+    <input type="text" placeholder="First Name" id="fname">
+    <input type="text" placeholder="Last Name" id="lname">
+    <button type="submit" onclick="btnclick()">Click</button>
+
+
+    <label id="labelid">Hello </label>
+
+
+
+
+    <script>
+        function btnclick(){
+           document.getElementById("labelid").innerText  += document.getElementById("fname").value +" " + document.getElementById("lname").value;
+        }
+    </script>
+
+</body>
+</html>

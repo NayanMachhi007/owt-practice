@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .main {
+        
+        background: beige;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .main .image-section {
+        padding: 20px;
+        height: 80vh;
+    }
+    
+
+    .main .image-section .img-section {
+        height: 400px;
+        width: 400px;
+    }
+
+    .main .sub-image-section {
+        height: 20vh;
+    }
+
+    .main .sub-image-section img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+
+
+
+    <div class="main">
+
+        <div class="image-section">
+            <img src="./images/news-1.jpg" alt="" class="img-section" id="imagesection">
+
+            <div id="imgsection">
+
+            </div>
+        </div>
+
+        <div class="sub-image-section">
+            <img src="./images/news-1.jpg" alt="news 1" onclick="btnclick(this)">
+            <img src="./images/news-2.jpg" alt="news 2" onclick="btnclick(this)">
+            <img src="./images/news-3.jpg" alt="news 3" onclick="btnclick(this)">
+            <img src="./images/news-4.jpg" alt="news 4" onclick="btnclick(this)">
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+
+        function btnclick(swiper) {
+
+            document.getElementById("imagesection").src = swiper.src;
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

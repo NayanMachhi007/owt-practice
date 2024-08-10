@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+
+<style>
+
+    main{
+        width: 300px;
+        height: 300px;
+    }
+
+
+    img{
+        width: 50px;
+        height: 50px;
+    }
+</style>
+<body>
+    
+
+    <img src="" alt="" id="main">
+
+
+    <img src="./images/news-1.jpg" alt="news-1" onclick="btn(this)">
+
+
+    <script>
+
+        function btn(data)
+        {
+
+            document.getElementById("main").src = data.src;
+
+        }
+
+
+    </script>
+</body>
+</html>

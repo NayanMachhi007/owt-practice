@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Preview and Next</title>
+
+    <style>
+        .main {
+            height: 100vh;
+            background: rgb(190, 187, 187);
+            text-align: center;
+
+        }
+
+        #first {
+            width: 400px;
+
+
+        }
+
+        .submain {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .submain img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <img src="/images/first-events.jpg" alt="First Events" id="first">
+
+        <div class="submain">
+            <img onclick="btnclick(this)" src="/images/fourth-events.jpg" alt="">
+            <img onclick="btnclick(this)" src="/images/news-1.jpg" alt="">
+            <img onclick="btnclick(this)" src="/images/news-2.jpg" alt="">
+            <img onclick="btnclick(this)" src="/images/news-3.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+
+        function btnclick(data){
+            console.log(document.getElementById("first").src=data.src);
+        }
+    </script>
+</body>
+
+</html>

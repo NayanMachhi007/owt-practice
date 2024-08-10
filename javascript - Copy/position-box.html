@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Box</title>
+
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(64, 65, 64);
+            position: absolute;
+            top:50px;
+            left: -300px;
+            transition: 1s;
+        }
+
+        .show{
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="box" id="boxdata">
+
+    </div>
+
+    <button onclick="data()">Click me</button>
+
+
+    <script>
+        function data(){
+            document.getElementById("boxdata").classList.toggle("show");
+        }
+    </script>
+</body>
+</html>

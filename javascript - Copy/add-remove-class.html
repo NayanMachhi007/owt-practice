@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove Class</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+
+        .box-1{
+            background-color:aquamarine;
+        }
+
+
+        .boxtemp{
+            height: 300px;
+            width: 300px;
+            background: green;
+        }
+
+        .box-2{
+           background: none;
+           border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+
+    <button onclick="data()">Click Me</button>
+
+    <div  class="box">
+        
+    </div>
+
+
+    <button onclick="data1()">Click me 1</button>
+
+    <div  class="boxtemp">
+        
+    </div>
+
+    
+
+    <script>
+        function data(){
+            document.querySelector(".box").classList.add("box-1");
+        }
+
+
+        function data1(){
+            document.querySelector(".boxtemp").classList.add("box-2");
+        }
+    </script>
+</body>
+</html>

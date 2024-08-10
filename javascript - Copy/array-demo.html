@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1 class="h1class">H1 Class 1</h1>
+    <h1>Simple h1 1</h1>
+    <h1 class="h1class">H1 Class 2</h1>
+    <h1>Simplw h1 2</h1>
+    <h1 id="h1id">H1 ID</h1>
+
+
+    <script>
+
+        let a = document.getElementsByClassName("h1class");
+        let b = document.getElementById("h1id");
+        let c = document.getElementsByTagName("h1");
+
+
+        for (let i = 0; i < a.length; i++) {
+                a[i].style.color = "red";
+        }
+
+
+    </script>
+</body>
+
+</html>

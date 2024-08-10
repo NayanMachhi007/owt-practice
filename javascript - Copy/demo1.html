@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 1</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .main {
+        width: 400px;
+        height: 400px;
+    }
+
+    .main .sub-main,
+    .third-main {
+        display: flex;
+        padding: 10px;
+
+    }
+
+    .main .sub-main input {
+        padding: 5px 20px;
+        margin-right: 10px;
+    }
+
+    .information {
+        padding: 50px;
+        border: 2px solid grey;
+        display: flex;
+    }
+
+  .information  p{
+
+    padding: 0 10px;
+
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="sub-main">
+            <input type="text" id="input-f-name">
+
+            <input type="text" id="input-l-name">
+        </div>
+
+        <div class="third-main">
+
+            <button type="button" onclick="information()">Click me</button>
+
+        </div>
+    </div>
+
+
+
+    <div class="information">
+
+        <div class="first-information">
+            <p>First Name : </p>
+            <p id="f-name"></p>
+        </div>
+
+        <div class="second-information">
+            <p>Last Name :</p>
+            <p id="l-name"></p>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function information() {
+            document.getElementById("f-name").innerHTML = document.getElementById("input-f-name").value;
+            document.getElementById("l-name").innerHTML = document.getElementById("input-l-name").value;
+        }
+    </script>
+
+</body>
+
+</html>

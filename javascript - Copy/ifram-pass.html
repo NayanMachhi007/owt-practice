@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ifram Js Pass</title>
+    <style>
+        .videomain {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="submain">
+            <video width="320" height="240" controls>
+                <source id="mainvideo" src="/javascript/video-1.mp4" type="video/mp4" onclick="iframclick(this)">
+            </video>
+        </div>
+        <div class="submtempmain">
+
+            <video width="320" height="240" controls>
+                <source src="/javascript/video-2.mp4" type="video/mp4" onclick="iframclick(this)">
+            </video>
+
+        </div>
+    </div>
+
+    <script>
+        function iframclick(data) {
+            document.getElementById("mainvideo").src = data.src;
+        }
+    </script>
+</body>
+
+</html>

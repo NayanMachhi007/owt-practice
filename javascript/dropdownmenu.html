@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Dpown Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        li {
+            list-style: none;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .dropdowndetails {
+            display: none;
+        }
+
+        .submin:hover .dropdowndetails {
+            display: block;
+        }
+
+        .submin {
+            padding: 20px 20px;
+           
+        }
+
+        .submin a::after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 4px;
+            width: 0px;
+            height: 3px;
+            background: var(--color-green);
+            transition: all 1s;
+        }
+
+        .dropdowndetails {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            border: 1px solid var(--color-border);
+           
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <nav>
+            <ul class="main">
+                <li class="submin"><a href="#">Home</a>
+
+                    <div class="dropdowndetails">
+                        <ul>
+                            <li><a href="#">Lorem Ipsum is simply dummy text of the</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy text of the</a></li>
+                            <li><a href="#">Test 3</a></li>
+                            <li><a href="#">Test 4</a></li>
+                        </ul>
+                    </div>
+
+
+                </li>
+                <li class="submin"><a href="#">About us</a>
+
+                    <div class="dropdowndetails">
+                        <ul>
+                            <li><a href="#">Lorem Ipsum is simply dummy text of the</a></li>
+                            <li><a href="#">Test 2</a></li>
+                            <li><a href="#">Test 3</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy text of the</a></li>
+                        </ul>
+                    </div>
+
+
+                </li>
+                <li class="submin"><a href="#">Services</a></li>
+                <li class="submin"><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

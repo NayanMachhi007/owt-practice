@@ -4,32 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Preview and Next</title>
-
+    <title>Number Next and Previews</title>
     <style>
-        .main {
-            height: 100vh;
-            background: rgb(190, 187, 187);
-            text-align: center;
-
+        .main-new {
+            font-size: 42px;
+            background-color: gainsboro;
         }
 
-        #first {
-            width: 400px;
-
-
-        }
-
-        .submain {
+        .sub-main {
             display: flex;
-            align-items: center;
             justify-content: space-evenly;
-
-        }
-
-        .submain img {
-            width: 100px;
-            height: 100px;
         }
     </style>
 </head>
@@ -38,22 +22,28 @@
 
 
     <div class="main">
-        <img src="/images/first-events.jpg" alt="First Events" id="first">
+        <div class="main-new">
+            <p class="paramain">1</p>
+        </div>
 
-        <div class="submain">
-            <img class="temp" onclick="btnclick(this)" src="/images/fourth-events.jpg" alt="">
-            <img class="temp" onclick="btnclick(this)" src="/images/news-1.jpg" alt="">
-            <img class="temp" onclick="btnclick(this)" src="/images/news-2.jpg" alt="">
-            <img class="temp" onclick="btnclick(this)" src="/images/news-3.jpg" alt="">
+        <div class="sub-main">
+            <p class="para">1</p>
+            <p class="para">2</p>
+            <p class="para">3</p>
+            <p class="para">4</p>
+        </div>
+
+        <div class="btn">
+            <button type="submit" onclick="nextbtn(this)">Next</button>
+            <button type="submit" onclick="prebtn()">pre</button>
         </div>
     </div>
 
 
     <script>
-
-        function btnclick(data){
-            console.log(document.getElementsByClassName("temp")[1]);
-
+        function nextbtn(){
+            let a = document.getElementsByClassName("para");        
+            console.log(a[0]);    
 
         }
     </script>
